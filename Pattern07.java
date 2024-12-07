@@ -1,19 +1,19 @@
-
 import java.util.Scanner;
 
-public class Pattern13 {
-
+public class Pattern07 {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Enter the height of pattern: ");
             int a = sc.nextInt();
-
-            int b = 1;
-
             for (int i = 0; i < a; i++) {
-                for (int j = 0; j <= i; j++) {
-                    System.out.print(b + " ");
-                    b++;
+                // For space
+                for (int j = 0; j < a - i - 1; j++) {
+                    System.out.print(" ");
+                }
+
+                // for star pattern
+                for (int k = 0; k <= 2 * i ; k++) {
+                    System.out.print("*");
                 }
                 System.out.println();
             }
